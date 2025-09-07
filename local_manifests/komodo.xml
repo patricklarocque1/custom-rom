@@ -11,18 +11,39 @@
            path="kernel/google/gs/caimito"
            revision="android-gs-caimito-6.1-android16" />
 
-  <!-- Placeholders for your own device/vendor repositories. If you host your
-       device and vendor trees remotely (e.g., GitHub/GitLab), add them here. -->
-  <!--
+  <!-- Device and vendor repositories for Pixel 9 Pro XL (komodo) -->
   <remote name="github" fetch="https://github.com/" />
-  <project name="yourorg/android_device_google_komodo"
+  <remote name="lineage" fetch="https://github.com/LineageOS/" />
+  <remote name="muppets" fetch="https://github.com/TheMuppets/" />
+  
+  <!-- Device tree for Pixel 9 Pro XL -->
+  <project name="LineageOS/android_device_google_komodo"
            path="device/google/komodo"
-           remote="github"
-           revision="main" />
-  <project name="yourorg/android_vendor_google_komodo"
-           path="vendor/google/komodo"
-           remote="github"
-           revision="main" />
-  -->
+           remote="lineage"
+           revision="lineage-22.0" />
+  
+  <!-- Common device tree for Pixel 9 family -->
+  <project name="LineageOS/android_device_google_caimito"
+           path="device/google/caimito"
+           remote="lineage"
+           revision="lineage-22.0" />
+  
+  <!-- Vendor blobs for Google devices -->
+  <project name="TheMuppets/proprietary_vendor_google"
+           path="vendor/google"
+           remote="muppets"
+           revision="lineage-22.0" />
+  
+  <!-- Hardware abstraction layer -->
+  <project name="LineageOS/android_hardware_google_pixel"
+           path="hardware/google/pixel"
+           remote="lineage"
+           revision="lineage-22.0" />
+  
+  <!-- Additional Tensor G4 specific repositories -->
+  <project name="LineageOS/android_hardware_google_graphics_zuma"
+           path="hardware/google/graphics/zuma"
+           remote="lineage"
+           revision="lineage-22.0" />
 </manifest>
 
