@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- AOSP remote and default revision for Android 16. Adjust r-tag as needed. -->
+  <remote name="aosp" fetch="https://android.googlesource.com/" />
+  <default remote="aosp" revision="android-16.0.0_r1" />
+
+  <!-- Pixel 9 Pro XL (komodo) uses the Tensor G4 kernel family. The kernel
+       source below points at the "caimito" GKI branch used for Android 16.
+       You can change the revision to a newer android16 kernel tag later. -->
+  <project name="kernel/gs/caimito"
+           path="kernel/google/gs/caimito"
+           revision="android-gs-caimito-6.1-android16" />
+
+  <!-- Placeholders for your own device/vendor repositories. If you host your
+       device and vendor trees remotely (e.g., GitHub/GitLab), add them here. -->
+  <!--
+  <remote name="github" fetch="https://github.com/" />
+  <project name="yourorg/android_device_google_komodo"
+           path="device/google/komodo"
+           remote="github"
+           revision="main" />
+  <project name="yourorg/android_vendor_google_komodo"
+           path="vendor/google/komodo"
+           remote="github"
+           revision="main" />
+  -->
+</manifest>
+
